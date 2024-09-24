@@ -136,7 +136,25 @@ def lab1():
         к категории так называемых микрофреймворков — минималистичных каркасов веб-приложений,
         сознательно предоставляющих лишь самые базовые возможности.
         </p>
-        <a href="/">Назад на главную</a></li>
+        <a href="/">Назад на главную</a>
+        <div class="first">
+        <p>Список роутов и ошибок:</p>
+            <ol>
+                <li><a href="/index">Index</a></li>
+                <li><a href="/lab1/web">Web</a></li>
+                <li><a href="/lab1/info">Info</a></li>
+                <li><a href="/lab1/oak">Дуб</a></li>
+                <li><a href="/lab1/counter">Counter</a></li>
+                <li><a href="/lab1/new_route">New route</a></li>
+                <li><a href="/error400">Ошибка 400</a></li>
+                <li><a href="/error401">Ошибка 401</a></li>
+                <li><a href="/error403">Ошибка 403</a></li>
+                <li><a href="/error404">Ошибка 404</a></li>
+                <li><a href="/error405">Ошибка 405</a></li>
+                <li><a href="/error418">Ошибка 418</a></li>
+                <li><a href="/lab1/trigger_500">Ошибка 500</a></li>
+            </ol>
+        </div>
     </body>
 </html>
 '''
