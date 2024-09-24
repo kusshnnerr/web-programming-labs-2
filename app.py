@@ -63,6 +63,23 @@ def counter():
 <html>
     <body>
         Сколько раз вы сюда заходили: ''' + str(count) + '''
+        <br>
+        <a href="/lab1/counter_reset">Сбросить счётчик</a>
+    </body>
+</html>
+'''
+
+@app.route("/lab1/counter_reset")
+def reset_counter():
+    global count
+    count = 0  
+    return '''
+<!doctype html>
+<html>
+    <body>
+        Счётчик успешно сброшен. 
+        <br>
+        <a href="/lab1/counter">Назад к счётчику</a>
     </body>
 </html>
 '''
