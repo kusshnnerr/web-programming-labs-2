@@ -1,0 +1,18 @@
+
+body {
+    background-color: rgba(122, 115, 102, 0.705);
+}
+h1 {
+    color: blanchedalmond;
+    font-size: 100px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.533);
+    -webkit-text-stroke: 2px burlywood;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+img {
+    height: 550px;
+    width: 700px;
+    border:15px #a09969b1  ridge; width:700px;
+    margin-left: 380px;
+}
