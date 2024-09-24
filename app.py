@@ -3,7 +3,20 @@ app = Flask(__name__)
 
 @app.errorhandler(404)
 def not_found(err):
-    return "нет такой страницы", 404
+        return '''
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="''' + url_for('static', filename='404.css') + '''">
+        <title>Ошибка 404</title>
+    </head>
+    <body>
+        <h1>ОЙ… Кажется такой страницы не существует</h1>
+        <p>Возможно, она была удалена, переименована или никогда не существовала.</p>
+        <img src="''' + url_for('static', filename='404_error.jpg') + '''">
+        <a href="/">Вернуться на главную</a>
+    </body>
+''', 404
 
 @app.route('/error400') 
 def error_400(): 

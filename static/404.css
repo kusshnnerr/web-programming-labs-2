@@ -1,0 +1,66 @@
+h1{
+    font-size: 80px;
+        color: #db345b;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        position: relative;
+        margin: 0;
+}
+h1::after {
+    content: '404';
+    font-size: 80px;
+    color: rgba(255, 0, 0, 0.1);
+    position: absolute;
+    top: 10px;
+    left: 130px;
+    z-index: -1;
+}
+p {
+    color: bisque;
+}
+img {
+    border-radius: 50%;
+    height: 400px;
+    width: 500px;
+    margin-left: 500px;
+    opacity: 0;
+    animation: fadeIn 5s forwards;
+  }
+  a {
+    font-size: 70px;
+    color: #69b0df;
+    text-decoration: none;
+    position: relative;
+    display: inline-block; 
+}
+
+a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #db3450;
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    transform: scaleX(0); 
+    transition: transform 0.3s ease; 
+}
+
+a:hover::after {
+    transform: scaleX(1); 
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 10; }
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #555;
+    opacity: 0;
+    animation: fadeIn 5s forwards;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.533);
+}
