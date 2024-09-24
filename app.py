@@ -5,6 +5,99 @@ app = Flask(__name__)
 def not_found(err):
     return "нет такой страницы", 404
 
+@app.route('/error400') 
+def error_400(): 
+    return ''' 
+<!doctype html> 
+<html> 
+    <body> 
+        <h1>400 - Bad Request</h1> 
+        <p>Сервер не может обработать ваш запрос.</p> 
+    </body> 
+</html> 
+''', 400
+
+@app.route('/error401') 
+def error_401(): 
+    return ''' 
+<!doctype html> 
+<html> 
+    <body> 
+        <h1>401 - Unauthorized</h1> 
+        <p>Доступ запрещен. Требуется авторизация.</p> 
+    </body> 
+</html> 
+''', 401 
+
+@app.route('/error402') 
+def error_402(): 
+    return ''' 
+<!doctype html> 
+<html> 
+    <body> 
+        <h1>402 - Payment Required</h1> 
+        <p>Требуется оплата для доступа к ресурсу.</p> 
+    </body> 
+</html> 
+''', 402 
+
+@app.route('/error403') 
+def error_403(): 
+    return ''' 
+<!doctype html> 
+<html> 
+    <body> 
+        <h1>403 - Forbidden</h1> 
+        <p>Доступ к ресурсу запрещен.</p> 
+    </body> 
+</html> 
+''', 403 
+
+@app.route('/error405') 
+def error_405(): 
+    return ''' 
+<!doctype html> 
+<html> 
+    <body> 
+        <h1>405 - Method Not Allowed</h1> 
+        <p>Запрошенный метод не разрешен для этого ресурса.</p> 
+    </body> 
+</html> 
+''', 405 
+
+@app.route('/error418') 
+def error_418(): 
+    return ''' 
+<!doctype html> 
+<html> 
+    <body> 
+        <h1>418 - I'm a teapot</h1> 
+        <p>Я — чайник, и я не могу заварить кофе.</p> 
+    </body> 
+</html> 
+''', 418 
+
+@app.route('/cause_error') 
+def cause_error(): 
+    # Намеренная ошибка: деление на ноль 
+    return 1 / 0  # Это вызовет ошибку 500 
+
+@app.errorhandler(500) 
+def internal_server_error(e): 
+    return ''' 
+<!doctype html> 
+<html> 
+    <head> 
+        <title>Ошибка сервера - 500</title> 
+    </head>  
+    <body> 
+        <h1>500 - Внутренняя ошибка сервера</h1> 
+        <p>На сервере произошла ошибка.</p> 
+        <a href="/">На главную</a> 
+    </body> 
+</html> 
+''', 500
+
 @app.route("/")
 
 @app.route('/lab1')
