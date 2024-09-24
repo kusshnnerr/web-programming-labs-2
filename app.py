@@ -90,26 +90,32 @@ def error_418():
 </html> 
 ''', 418 
 
-@app.route('/cause_error') 
-def cause_error(): 
-    # Намеренная ошибка: деление на ноль 
-    return 1 / 0  # Это вызовет ошибку 500 
-
-@app.errorhandler(500) 
-def internal_server_error(e): 
-    return ''' 
-<!doctype html> 
-<html> 
-    <head> 
-        <title>Ошибка сервера - 500</title> 
-    </head>  
-    <body> 
-        <h1>500 - Внутренняя ошибка сервера</h1> 
-        <p>На сервере произошла ошибка.</p> 
-        <a href="/">На главную</a> 
-    </body> 
-</html> 
+@app.errorhandler(500)
+def internal_server_error(err):
+    return '''
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="''' + url_for('static', filename='lab1.css') + '''">
+        <title>Ошибка 500</title>
+    </head>
+    <body>
+        <h1>Внутренняя ошибка сервера</h1>
+        <p>На сервере произошла ошибка, в результате которой он не может успешно обработать запрос.
+        Пожалуйста, попробуйте позже.</p>
+        <a href="/">Вернуться на главную</a>
+    </body>
+</html>
 ''', 500
+
+@app.route('/lab1/trigger_500')
+def trigger_500():
+    abort(500)
+
+@app.route('/lab1/an_error')
+def make_an_error():
+    return 1 / 0
+
 
 @app.route("/")
 
