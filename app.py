@@ -255,3 +255,42 @@ def created():
     <body>
 </html>
 ''', 201
+
+@app.route('/lab1/new_route')
+def new_route():
+    return '''
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="''' + url_for('static', filename='new.css') + '''">
+        <title>The Richest Man In Babylon</title>
+    </head>
+    <body>
+        <h1>George S. Clason</h1>
+        <p>
+        Our prosperity as a nation depends upon the personal financial prosperity of each of us as individuals.
+        </p>
+        <p>
+        This book deals with the personal successes of each of us. Success means accomplishments as the result of our own efforts
+        and abilities. Proper preparation is the key to our success. Our acts can be no wiser than our thoughts.
+        Our thinking can be no wiser than our understanding.
+        </p>
+        <p>
+        This book of cures for lean purses has been termed a guide to financial understanding.
+        That, indeed, is its purpose: to offer those who are ambitious for financial success an insight which will aid them
+        to acquire money, to keep money and to make their surpluses earn more money.
+        </p>
+        <div class="image_container" style='position: absolute; right: 50px; top: 10%'>
+            <img src="''' + url_for('static', filename='book.jpg') + '''" style='margin-top: 10px'>
+        </div>
+        <div>
+        <a href="/lab1">Back to the lab page</a>
+        </div>
+    </body>
+    <footer>Кушнер Екатерина Константиновна, ФБИ-21, 3 Курс, 2024 год.</footer>
+</html>
+''', 200, {
+    'Content-Language': 'en',
+    'X-Nerd': '42',
+    'X-Student': 'Kushner Ekaterina'
+}
