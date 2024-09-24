@@ -14,7 +14,6 @@ img {
     margin-left: 420px;
     margin-top: 50px;
 }
-/* Сброс для обнуления отступов и полей */
 * {
     margin: 0;
     padding: 0;
@@ -22,50 +21,47 @@ img {
 }
 
 html, body {
-    height: 100%; /* Задает высоту 100% для html и body */
-    font-family:'Times New Roman', Times, serif; /* Задает шрифт для всего документа */
+    height: 100%;
+    font-family:'Times New Roman', Times, serif; 
 }
 
 body {
     display: flex;
-    flex-direction: column; /* Устанавливаем вертикальную компоновку */
+    flex-direction: column; 
 }
 
-/* Стили для header */
 header {
-    background-color: #e294b5; /* Фоновый цвет заголовка */
-    color: white; /* Цвет текста */
+    background-color: #e294b5; 
+    color: white; 
     font-size: 17pt;
-    text-align: center; /* Выравнивание текста по центру */
-    padding: 20px; /* Отступы внутри заголовка */
-    flex-shrink: 0; /* Запрещает заголовку сжиматься */
+    text-align: center; 
+    padding: 20px; 
+    flex-shrink: 0; 
 }
 
-/* Стили для основного контента */
 ol {
-    flex-grow: 1; /* Позволяет списку занимать все доступное пространство */
-    padding: 20px; /* Добавляет отступы к списку */
-    background-color: #d6c6f6; /* Светло-серый фон для контента */
-    text-align: left; /* Выравнивание текста влево */
+    flex-grow: 1; 
+    padding: 20px; 
+    background-color: #d6c6f6; 
+    text-align: left; 
 }
 
-/* Стили для ссылок */
 a {
-    text-decoration: none; /* Убираем подчеркивание с ссылок */
-    color: #fdf5ff; /* Синий цвет ссылок */
+    text-decoration: none; 
+    color: #b57caf; 
     font-size: 25pt;
     font-weight: 1000px;
+    text-align: center;
 }
 
 a:hover {
-    text-decoration: underline; /* Подчеркиваем ссылки при наведении */
+    text-decoration: underline; 
     color: aliceblue;
 }
 
-/* Стили для footer */
 footer {
-    background-color:#cf88e0; /* Темный фон для футера */
-    color: white; /* Цвет текста */
+    background-color:#cf88e0; 
+    color: white; 
     padding: 15px;
     font-size: 17pt;
     font-family: 'Times New Roman';
@@ -76,9 +72,9 @@ footer {
     left: 0;
 }
 li {
-    text-decoration: none; /* Убираем подчеркивание с ссылок */
-    color: #fdf3ff; /* Синий цвет ссылок */
-    font-weight: bold; /* Жирный шрифт для ссылок */
+    text-decoration: none; 
+    color: #fdf3ff; 
+    font-weight: bold;
     font-size: 20pt;
     margin-left: 575px;
 }
@@ -87,4 +83,15 @@ title {
     padding: 15px;
     font-size: 17pt;
     font-family: 'Times New Roman'
+}
+
+p {
+    text-align: justify; 
+    line-height: 1.5; 
+    font-size: 20px; 
+    text-indent: 0cm; 
+    margin: 5px; 
+    max-width: 600px; 
+    margin-left: auto; 
+    margin-right: auto;
 }
