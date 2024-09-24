@@ -1,7 +1,4 @@
 
-body {
-    background-color: rgba(122, 115, 102, 0.705);
-}
 h1 {
     color: blanchedalmond;
     font-size: 100px;
@@ -14,5 +11,80 @@ img {
     height: 550px;
     width: 700px;
     border:15px #a09969b1  ridge; width:700px;
-    margin-left: 380px;
+    margin-left: 420px;
+    margin-top: 50px;
+}
+/* Сброс для обнуления отступов и полей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Задает высоту 100% для html и body */
+    font-family:'Times New Roman', Times, serif; /* Задает шрифт для всего документа */
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Устанавливаем вертикальную компоновку */
+}
+
+/* Стили для header */
+header {
+    background-color: #e294b5; /* Фоновый цвет заголовка */
+    color: white; /* Цвет текста */
+    font-size: 17pt;
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 20px; /* Отступы внутри заголовка */
+    flex-shrink: 0; /* Запрещает заголовку сжиматься */
+}
+
+/* Стили для основного контента */
+ol {
+    flex-grow: 1; /* Позволяет списку занимать все доступное пространство */
+    padding: 20px; /* Добавляет отступы к списку */
+    background-color: #d6c6f6; /* Светло-серый фон для контента */
+    text-align: left; /* Выравнивание текста влево */
+}
+
+/* Стили для ссылок */
+a {
+    text-decoration: none; /* Убираем подчеркивание с ссылок */
+    color: #fdf5ff; /* Синий цвет ссылок */
+    font-size: 25pt;
+    font-weight: 1000px;
+}
+
+a:hover {
+    text-decoration: underline; /* Подчеркиваем ссылки при наведении */
+    color: aliceblue;
+}
+
+/* Стили для footer */
+footer {
+    background-color:#cf88e0; /* Темный фон для футера */
+    color: white; /* Цвет текста */
+    padding: 15px;
+    font-size: 17pt;
+    font-family: 'Times New Roman';
+    text-align: right;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+li {
+    text-decoration: none; /* Убираем подчеркивание с ссылок */
+    color: #fdf3ff; /* Синий цвет ссылок */
+    font-weight: bold; /* Жирный шрифт для ссылок */
+    font-size: 20pt;
+    margin-left: 550px;
+}
+title {
+    background-color: burlywood;
+    padding: 15px;
+    font-size: 17pt;
+    font-family: 'Times New Roman'
 }
