@@ -145,6 +145,7 @@ def lab1():
                 <li><a href="/lab1/info">Info</a></li>
                 <li><a href="/lab1/oak">Дуб</a></li>
                 <li><a href="/lab1/counter">Counter</a></li>
+                <li><a href="/lab1/created">Created</a></li>
                 <li><a href="/lab1/new_route">New route</a></li>
                 <li><a href="/error400">Ошибка 400</a></li>
                 <li><a href="/error401">Ошибка 401</a></li>
