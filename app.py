@@ -354,3 +354,5 @@ def example ():
     course = '3'
     return render_template('example.html', name=name, number=number, group=group, course=course)
 
+
+
