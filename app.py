@@ -88,7 +88,7 @@ def error_418():
         <p>Я — чайник, и я не могу заварить кофе.</p> 
     </body> 
 </html> 
-''', 418, {'Content-Type': 'text/plain'}
+''', 418
 
 @app.errorhandler(500)
 def internal_server_error(err):
