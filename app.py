@@ -313,3 +313,11 @@ def new_route():
     'X-Nerd': '42',
     'X-Student': 'Kushner Ekaterina'
 }
+
+@app.route("/lab2/a/")
+def a():
+    return "ok"
+
+@app.route("/lab2/a")
+def a2():
+    return "ok"
