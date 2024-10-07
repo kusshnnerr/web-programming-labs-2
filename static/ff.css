@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+p {
+    color: #666;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {   
+    color: #45a049;
+}
+
+.flower-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 20px;
+}
+
+.flower-card {
+    background-color: rgba(246, 217, 221, 0.86);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.flower-card:hover {
+    transform: translateY(-5px);
+}
+
+.flower-card h2 {
+    color: #f57ee5;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.flower-card p {
+    color: #666;
+    font-size: 14px;
+}

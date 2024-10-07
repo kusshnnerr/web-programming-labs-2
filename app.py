@@ -322,29 +322,30 @@ def a():
 def a2():
     return "ok"
 
-flower_list = ['роза' , 'тюльпан' , 'ромашка', 'незабудка']
+flower_list = ['роза', 'тюльпан', 'ромашка', 'незабудка']
 
 @app.route("/lab2/flowers/<int:flower_id>")
-def flowers (flower_id):
+def flowers(flower_id):
     if flower_id >= len(flower_list):
-        return "такого цветка нет", 404
+        return render_template('404.html'), 404
     else:
-        return "цветок: " + flower_list[flower_id]
+        return render_template('flower.html', flower=flower_list[flower_id])
 
 @app.route('/lab2/add_flower/<name>')
 def add_flower(name):
+    if not name:
+        return "вы не задали имя цветка", 400
     flower_list.append(name)
-    return f''' 
-<!doctype html>
-<html>
-    <body>
-    <h1>Добавлен новый цветок</h1>
-    <p>Название нового цветка: {name}</p>
-    <p>Всего цветов: {len(flower_list)}</p>
-    <p>Полный список: {flower_list}</p>
-    </body>
-</html>
-'''
+    return render_template('add_flower.html', name=name, total=len(flower_list), flowers=flower_list)
+
+@app.route('/lab2/all_flowers')
+def all_flowers():
+    return render_template('all_flowers.html', flowers=flower_list, total=len(flower_list))
+
+@app.route('/lab2/clear_flowers')
+def clear_flowers():
+    flower_list.clear()
+    return redirect(url_for('all_flowers'))
 
 @app.route('/lab2/example')
 def example ():
