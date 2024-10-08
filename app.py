@@ -316,11 +316,11 @@ def new_route():
 
 @app.route("/lab2/a/")
 def a():
-    return "ok"
+    return "с палочкой"
 
 @app.route("/lab2/a")
 def a2():
-    return "ok"
+    return "без палочки"
 
 flower_list = ['роза', 'тюльпан', 'ромашка', 'незабудка']
 
@@ -369,3 +369,24 @@ def lab2():
 def filters():
     phrase = "О <b>сколько</b> <u>нам</u> <i>открытий</i> чудных..."
     return render_template('filter.html', phrase=phrase) 
+
+@app.route('/lab2/calc/')
+def default_calc():
+    return redirect(url_for('calc', a=1, b=1))
+
+@app.route('/lab2/calc/<int:a>')
+def calc_with_one_number(a):
+    return redirect(url_for('calc', a=a, b=1))
+
+@app.route('/lab2/calc/<int:a>/<int:b>')
+def calc(a, b):
+    add = a + b
+    subtract = a - b
+    multiply = a * b
+    if b != 0:
+        divide = a / b
+    else:
+        divide = "Деление на ноль невозможно"
+    power = a ** b
+
+    return render_template('calculator.html', a=a, b=b, add=add, subtract=subtract, multiply=multiply, divide=divide, power=power)
