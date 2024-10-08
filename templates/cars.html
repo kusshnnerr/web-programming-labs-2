@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кушнер Екатерина. Лабораторная работа 2</title>
+    <style>
+        .car-item {
+            display: inline-block;
+            width: 300px;
+            margin: 20px;
+            text-align: center;
+        }
+        .car-item img {
+            width: 200px;
+            height: 150px;
+        }
+        header {
+            background-color: aliceblue;
+            padding: 15px;
+            font-size: 17pt;
+            position:fixed;
+            top:0;
+            left:0;
+            right:0;
+            display:block;
+            z-index: 1;
+        }
+        footer {
+            background-color:aliceblue; 
+            color: rgb(0, 0, 0); 
+            padding: 15px;
+            font-size: 17pt;
+            font-family: 'Times New Roman';
+            text-align: right;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        WEB-программирование, часть 2. Лабораторная работа 2   
+    </header>
+
+    <h1>Самые люксовые автомобили</h1>
+    <div class="car-list">
+        {% for car in cars %}
+        <div class="car-item">
+            <img src="{{ url_for('static', filename=car.image) }}" alt="{{ car.name }}">
+            <h3>{{ car.name }}</h3>
+            <p>{{ car.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <footer>
+        &copy; Кушнер, ФБИ-21, 3 курс, 2024
+    </footer>
+</body>
+</html>
