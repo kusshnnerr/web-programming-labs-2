@@ -390,3 +390,69 @@ def calc(a, b):
     power = a ** b
 
     return render_template('calculator.html', a=a, b=b, add=add, subtract=subtract, multiply=multiply, divide=divide, power=power)
+
+books = [
+    {
+        "author": "Джордж Оруэлл",
+        "title": "1984",
+        "genre": "Антиутопия",
+        "pages": 328
+    },
+    {
+        "author": "Джон Р.Р. Толкин",
+        "title": "Властелин колец",
+        "genre": "Фэнтези",
+        "pages": 1178
+    },
+    {
+        "author": "Стивен Кинг",
+        "title": "Оно",
+        "genre": "Ужасы",
+        "pages": 1138
+    },
+    {
+        "author": "Агата Кристи",
+        "title": "Убийство в Восточном экспрессе",
+        "genre": "Детектив",
+        "pages": 256
+    },
+    {
+        "author": "Харпер Ли",
+        "title": "Убить пересмешника",
+        "genre": "Драма",
+        "pages": 281
+    },
+    {
+        "author": "Рэй Брэдбери",
+        "title": "451 градус по Фаренгейту",
+        "genre": "Антиутопия",
+        "pages": 208
+    },
+    {
+        "author": "Александр Дюма",
+        "title": "Три мушкетера",
+        "genre": "Приключения",
+        "pages": 656
+    },
+    {
+        "author": "Джек Лондон",
+        "title": "Зов предков",
+        "genre": "Приключения",
+        "pages": 192
+    },
+    {
+        "author": "Ремарк Эрих Мария",
+        "title": "На Западном фронте без перемен",
+        "genre": "Военная проза",
+        "pages": 224
+    },
+    {
+        "author": "Эрнест Хемингуэй",
+        "title": "Старик и море",
+        "genre": "Повесть",
+        "pages": 127
+    }
+]
+@app.route("/lab2/books")
+def books_page():
+    return render_template("books.html", books=books)

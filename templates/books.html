@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Кушнер Екатерина. Лабораторная работа 2</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(to bottom right, #f2f2f2, #e6e6e6);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        table {
+            width: 80%;
+            margin-bottom: 20px;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+            font-size: 15px;
+            background: #fff!important;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        table th, table td {
+            border-right: 1px solid #ddd;
+            padding: 10px 20px;
+        }
+        table th:last-child, table td:last-child {
+            border-right: none;
+        }
+        table tbody tr {
+            background-color: #f8f8f8;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        table tbody tr:hover {
+            background-color: #f2f2f2;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        table th {
+            font-weight: bold;
+            background: #ff6cd5;
+            color: #fff;
+            border-top: 3px solid #fff;
+            border-bottom: 3px solid #c263fa;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            background-color: aliceblue;
+            padding: 15px;
+            font-size: 17pt;
+            position:fixed;
+            top:0;
+            left:0;
+            right:0;
+            display:block;
+            z-index: 1;
+        }
+        footer {
+            background-color:aliceblue; 
+            color: rgb(0, 0, 0); 
+            padding: 15px;
+            font-size: 17pt;
+            font-family: 'Times New Roman';
+            text-align: right;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+
+     <header>
+        WEB-программирование, часть 2. Лабораторная работа 2
+     </header>
+
+    <h1>Список книг</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Автор</th>
+                <th>Название</th>
+                <th>Жанр</th>
+                <th>Количество страниц</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in books %}
+            <tr>
+                <td>{{ book.author }}</td>
+                <td>{{ book.title }}</td>
+                <td>{{ book.genre }}</td>
+                <td>{{ book.pages }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <footer>
+        &copy; Екатерина Кушнер, ФБИ-21, 3 курс, 2024
+    </footer>
+</body>
+</html>
