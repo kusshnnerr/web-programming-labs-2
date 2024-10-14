@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{# Номер лабораторной работы: #}
+{% block lab %}Лабораторная работа 3 {% endblock %}
+
+{# Основной контент:#}
+{% block main %}
+    <h1>Формы, cookie</h1>
+    <div>Список сделанных страниц:</div>
+    <ol>
+        <li><a href="/lab3/cookie">Куки</a></li>
+    </ol>
+    <a href="/index">Назад в меню</a>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="content"></div>
+{% endblock %}

@@ -1,71 +1,88 @@
-html {
-    height:100%;
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #581127 50%, #C36885 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: .5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+}
+
+.bg3 {
+  animation-duration: 5s;
+}
+
+@keyframes slide {
+  0% {
+      transform: translateX(-25%);
   }
-  
-  body {
-    margin:0;
+  100% {
+      transform: translateX(25%);
   }
-  
-  .bg {
-    animation:slide 3s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, #581127 50%, #C36885 50%);
-    bottom:0;
-    left:-50%;
-    opacity:.5;
-    position:fixed;
-    right:-50%;
-    top:0;
-    z-index:-1;
-  }
-  
-  .bg2 {
-    animation-direction:alternate-reverse;
-    animation-duration:4s;
-  }
-  
-  .bg3 {
-    animation-duration:5s;
-  }
-  
-  @keyframes slide {
-    0% {
-      transform:translateX(-25%);
-    }
-    100% {
-      transform:translateX(25%);
-    }
-  }
+}
+
+body {
+  display: flex; 
+  justify-content: center; 
+  align-items: flex-start;
+}
+
 main {
-    margin-left: 10px;
-    margin-right: 1000px;
-    background-color:#e9a2ece2;
-    color: rgb(255, 255, 255);
-    font-size: 30px;
-    margin-top: 100px;
-    border: 5px solid black;
-    padding: 10px;
-    text-shadow: 2px 2px 4px rgba(172, 111, 111, 0.922);
+  width: 80%; 
+  max-width: 800px; 
+  background-color: #e9a2ece2;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  margin-top: 100px;
+  border: 5px solid black;
+  padding: 10px;
+  text-shadow: 2px 2px 4px rgba(172, 111, 111, 0.922);
+  text-align: center; 
 }
+
 header {
-    background-color: aliceblue;
-    padding: 15px;
-    font-size: 17pt;
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    display:block;
-    z-index: 1;
+  background-color: aliceblue;
+  padding: 15px;
+  font-size: 17pt;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 1;
 }
+
 footer {
-    background-color:aliceblue; 
-    color: rgb(0, 0, 0); 
-    padding: 15px;
-    font-size: 17pt;
-    font-family: 'Times New Roman';
-    text-align: right;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
+  background-color: aliceblue; 
+  color: rgb(0, 0, 0); 
+  padding: 15px;
+  font-size: 17pt;
+  font-family: 'Times New Roman';
+  text-align: right;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+ol {
+  list-style-position: inside; 
+  padding: 0; 
+  text-align: center; 
+}
+
+ol li {
+  display: inline-block; 
+  margin: 0 10px;
 }
