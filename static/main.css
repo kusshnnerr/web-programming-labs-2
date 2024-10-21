@@ -86,3 +86,9 @@ ol li {
   display: inline-block; 
   margin: 0 10px;
 }
+
+.error {
+    color: red;
+    margin-top: 5px;
+    display: block;
+}
