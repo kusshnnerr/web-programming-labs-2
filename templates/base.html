@@ -11,15 +11,12 @@
             {% if request.cookies.get('color') %}
             color : {{ request.cookies.get('color') }};
             {% endif %}
-
             {% if request.cookies.get('background-color') %}
             background-color: {{ request.cookies.get('background-color') }};
             {% endif %}
-
             {% if request.cookies.get('fontsize') %}
             font-size: {{ request.cookies.get('fontsize') }}px;
             {% endif %}
-
             {% if request.cookies.get('fontweight') %}
             font-weight: {{ request.cookies.get('fontweight') }};
             {% endif %}
