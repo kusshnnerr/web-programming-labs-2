@@ -50,6 +50,7 @@ main {
   padding: 10px;
   text-shadow: 2px 2px 4px rgba(172, 111, 111, 0.922);
   text-align: center; 
+  z-index: 1;;
 }
 
 header {
@@ -61,15 +62,13 @@ header {
   left: 0;
   right: 0;
   display: block;
-  z-index: 1;
 }
 
 footer {
-  background-color: aliceblue; 
-  color: rgb(0, 0, 0); 
-  padding: 15px;
-  font-size: 17pt;
-  font-family: 'Times New Roman';
+  margin-top: 20px; /* Задайте необходимый отступ */
+  padding: 10px;
+  background-color: #333; /* Опционально для лучшего внешнего вида */
+  color: white; /* Цвет текста */
   text-align: right;
   position: fixed;
   bottom: 0;
