@@ -77,7 +77,7 @@ def author() :
 
 @lab1.route('/lab1/oak')
 def oak():
-    path = url_for("static", filename="oak.jpg")
+    path = url_for("static", filename="lab1/oak.jpg")
     style = url_for('static', filename='lab1.css')
     return '''
 <!doctype html>
@@ -151,7 +151,7 @@ def new_route():
 <!doctype html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="''' + url_for('static', filename='new.css') + '''">
+        <link rel="stylesheet" type="text/css" href="''' + url_for('static', filename='lab1/new.css') + '''">
         <title>The Richest Man In Babylon</title>
     </head>
     <body>
@@ -170,7 +170,7 @@ def new_route():
         to acquire money, to keep money and to make their surpluses earn more money.
         </p>
         <div class="image_container" style='position: absolute; right: 50px; top: 10%'>
-            <img src="''' + url_for('static', filename='book.jpg') + '''" style='margin-top: 10px'>
+            <img src="''' + url_for('static', filename='lab1/book.jpg') + '''" style='margin-top: 10px'>
         </div>
         <div>
         <a href="/lab1">Back to the lab page</a>
